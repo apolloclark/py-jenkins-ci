@@ -3,7 +3,7 @@
 
 PyJenkinsCI is a test Jenkins Continuous Integration (CI) for Python projects.
 This project runs standard code quality checks, and a JMeter stress performance
-test. ***This project should not be deployed into production!!! It is for
+test. ***This project should not be deployed into production!!!*** It is for
 demonstration and learning uses only. ***Only run this locally!!!***
 
 ## Run test project
@@ -27,12 +27,12 @@ If you would like to add your own project, here are the steps to take:
 - Source Code Management: Git
 - Repository URL: https://github.com/apolloclark/discover-flask-vagrant
 
-## Build
+### Build
 - "Add build step"
 - Execute shell
 - Command: "sh /vagrant/build.sh"
 
-## Post-build Actions
+### Post-build Actions
 ***Report Violations***
 - pylint: **/pylint.out
 
