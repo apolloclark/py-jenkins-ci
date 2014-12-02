@@ -1,5 +1,11 @@
 #!/bin/bash 
 
+# set Host system username and password, for SSH access
+HOST_USER="apolloclark" # INSERT YOUR HOST USERNAME
+HOST_PASS="jenkins" #INSERT YOUR HOST PASSWORD
+export HOST_USER
+export HOST_PASS
+
 # set the Workspace path
 WORKSPACE_PATH="/var/lib/jenkins/jobs/discover-flask-vagrant/workspace/"
 export WORKSPACE_PATH
@@ -14,7 +20,7 @@ rm -f pylint.out
 rm -f sloccount.sc
 
 # connect to Host Machine
-sshpass -p 'jenkins' ssh apolloclark@10.0.2.2 -o StrictHostKeyChecking=no -t -t <<EOF
+sshpass -p $HOST_PASS ssh $HOST_USER@10.0.2.2 -o StrictHostKeyChecking=no -t -t <<EOF
 
 # cd ~/Sites/discover-flask-test/vagrant-test
 # delete old files, copy over new Git data
@@ -53,7 +59,7 @@ jmeter -n -t /vagrant/jmeter.jmx -l $WORKSPACE_PATH/jmeter.jtl
 
 
 # connect to Host Machine
-sshpass -p 'jenkins' ssh apolloclark@10.0.2.2 -o StrictHostKeyChecking=no -t -t <<EO3
+sshpass -p $HOST_PASS ssh $HOST_USER@10.0.2.2 -o StrictHostKeyChecking=no -t -t <<EO3
 
 # destroy VM, delete folder
 cd ~/Sites/discover-flask-test/vagrant-test

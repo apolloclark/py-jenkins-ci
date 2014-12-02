@@ -9,8 +9,10 @@ only.
 
 ## Run test project
 - use a Mac, or Ubuntu system
+- enable remote SSH access
 - install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html)
-- git clone project into ~/Sites folder
+- git clone project into "~/Sites" folder
+- configure the ssh HOST_USER and HOST_PASS in "/data/build.sh"
 - go into "/vagrant" folder, run "vagrant up"
 - wait for provisioning to finish, usually 2 to 10 minutes
 - open browser, go to "http://127.0.0.1:8080"
