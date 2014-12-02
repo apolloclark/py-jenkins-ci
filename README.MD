@@ -1,10 +1,10 @@
-# PyJenkins
+# PyJenkinsCI
 =========
 
 PyJenkinsCI is a test Jenkins Continuous Integration (CI) for Python projects.
 This project runs standard code quality checks, and a JMeter stress performance
-test. This project *should not be deployed into product*, it is for
-demonstration and learning uses only. *Only run this locally*.
+test. ***This project should not be deployed into production!!! It is for
+demonstration and learning uses only. ***Only run this locally!!!***
 
 ## Run test project
 - git clone project into ~/Sites folder
@@ -19,11 +19,11 @@ demonstration and learning uses only. *Only run this locally*.
 
 If you would like to add your own project, here are the steps to take:
 
-*Create New Project*
+***Create New Project***
 - Item name: discover-flask-vagrant
 - Freestyle Project
 
-*Source Code Management*
+***Source Code Management***
 - Source Code Management: Git
 - Repository URL: https://github.com/apolloclark/discover-flask-vagrant
 
@@ -33,29 +33,27 @@ If you would like to add your own project, here are the steps to take:
 - Command: "sh /vagrant/build.sh"
 
 ## Post-build Actions
-*Report Violations*
+***Report Violations***
 - pylint: **/pylint.out
 
-*Publish JUnit test result report*
+***Publish JUnit test result report***
 - Test report XMLs: **/nosetests.xml
 
-*Public Cobertura Coverage Report*
+***Public Cobertura Coverage Report***
 - Cobertura xml report pattern: **/coverage.xml
 
-*Publish SLOCCount analysis results*
+***Publish SLOCCount analysis results***
 - SLOCCount reports: **/sloccount.sc
 
-*Publish Performance test result report*
+***Publish Performance test result report***
 - Add a new report > JMeter
 - Report files: **/jmeter.jtl
 
-*Save*
+***Save***
+***Build Now***
+***Enjoy the show!***
 
-*Build Now*
-
-*Enjoy the show!*
-
-*References*
+***References***
 http://www.alexconrad.org/2011/10/jenkins-and-python.html
 http://bhfsteve.blogspot.com/2012/04/automated-python-unit-testing-code_27.html
 http://www.wallix.org/2011/06/29/how-to-use-jenkins-for-python-development/

@@ -2,3 +2,7 @@
 .project
 
 data/jmeter.log
+
+
+vagrant/.vagrant/**
+vagrant/.vagrant/
