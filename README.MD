@@ -8,13 +8,15 @@ be deployed into production!!!*** It is for demonstration and learning uses
 only.
 
 ## Run test project
+- use a Mac, or Ubuntu system
+- install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html)
 - git clone project into ~/Sites folder
 - go into "/vagrant" folder, run "vagrant up"
-- wait for provisioning to finish
+- wait for provisioning to finish, usually 2 to 10 minutes
 - open browser, go to "http://127.0.0.1:8080"
 - click on "discover-flask-vagrant"
 - click "Build Now"
-- wait for project to buid
+- wait for project to build
 
 <br/>
 <br/>
