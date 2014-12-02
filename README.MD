@@ -15,7 +15,14 @@ demonstration and learning uses only. ***Only run this locally!!!***
 - click "Build Now"
 - wait for project to buid
 
-## Configure a New Jenkins Project
+
+
+
+
+
+
+
+## Add Another Jenkins Project
 
 If you would like to add your own project, here are the steps to take:
 
