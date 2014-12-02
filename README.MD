@@ -1,10 +1,11 @@
 # PyJenkinsCI
 =========
 
-PyJenkinsCI is a test Jenkins Continuous Integration (CI) for Python projects.
-This project runs standard code quality checks, and a JMeter stress performance
-test. ***This project should not be deployed into production!!!*** It is for
-demonstration and learning uses only. ***Only run this locally!!!***
+PyJenkinsCI is a test Jenkins Continuous Integration (CI) for Python projects,
+compatible with Mac OSX and Ubuntu systems. This project runs standard code
+quality checks, and a JMeter stress performance test. ***This project should not
+be deployed into production!!!*** It is for demonstration and learning uses
+only.
 
 ## Run test project
 - git clone project into ~/Sites folder
