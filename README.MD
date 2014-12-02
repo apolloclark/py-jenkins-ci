@@ -62,6 +62,10 @@ If you would like to add your own project, here are the steps to take:
 
 ***Save***
 
+***Update pathways in build.sh***
+
+***Add "/www/run_tests.sh" script to project***
+
 ***Build Now***
 
 ***Enjoy the show!***
