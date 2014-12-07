@@ -13,12 +13,22 @@ only.
 - install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html)
 - git clone project into "~/Sites" folder
 - configure the ssh HOST_USER and HOST_PASS in "/data/build.sh"
-- go into "/vagrant" folder, run "vagrant up"
+- open a Terminal, cd "/vagrant", run "vagrant up"
 - wait for provisioning to finish, usually 2 to 10 minutes
 - open browser, go to "http://127.0.0.1:8080"
 - click on "discover-flask-vagrant"
 - click "Build Now"
 - wait for project to build
+
+## Video
+[https://www.youtube.com/watch?v=WJb1U4mlK7s](https://www.youtube.com/watch?v=WJb1U4mlK7s)
+
+## To Do:
+- add Windows Host support
+- add Selenium, WebDriver, and Protractor
+- add Snort
+- add Nagios
+- add Mittn
 
 <br/>
 <br/>
@@ -76,6 +86,6 @@ If you would like to add your own project, here are the steps to take:
 
 ***References***
 
-http://www.alexconrad.org/2011/10/jenkins-and-python.html
-http://bhfsteve.blogspot.com/2012/04/automated-python-unit-testing-code_27.html
-http://www.wallix.org/2011/06/29/how-to-use-jenkins-for-python-development/
+- http://www.alexconrad.org/2011/10/jenkins-and-python.html
+- http://bhfsteve.blogspot.com/2012/04/automated-python-unit-testing-code_27.html
+- http://www.wallix.org/2011/06/29/how-to-use-jenkins-for-python-development/
