@@ -26,25 +26,30 @@ sudo service jenkins start
 # @see /var/lib/jenkins/plugins/
 
 # Install Plugins
-sudo wget http://updates.jenkins-ci.org/latest/performance.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/cobertura.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/violations.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/sloccount.hpi -P /var/lib/jenkins/plugins/
+echo "Installing Jenkins plugins..."
+sudo wget -q http://updates.jenkins-ci.org/latest/performance.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/cobertura.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/violations.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/sloccount.hpi -P /var/lib/jenkins/plugins/
 
 # Install Github Plugins, and dependencies
-sudo wget http://updates.jenkins-ci.org/latest/github-api.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/git-client.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/scm-api.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/matrix-project.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/git.hpi -P /var/lib/jenkins/plugins/
-sudo wget http://updates.jenkins-ci.org/latest/github.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/github-api.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/git-client.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/scm-api.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/matrix-project.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/git.hpi -P /var/lib/jenkins/plugins/
+sudo wget -q http://updates.jenkins-ci.org/latest/github.hpi -P /var/lib/jenkins/plugins/
+echo "Done installing Jenkins plugins."
+sudo chmod -R 0777 /var/lib/jenkins/plugins
+
 
 # copy over project setup
 sudo cp -r /vagrant/discover-flask-vagrant/ /var/lib/jenkins/jobs/discover-flask-vagrant/
 sudo chmod -R 777 /var/lib/jenkins/jobs/discover-flask-vagrant/
 
 # restart Jenkins
-sudo /etc/init.d/jenkins restart
+sudo service jenkins restart
+# sudo /etc/init.d/jenkins restart
 
 # Install JMeter
 sudo apt-get -y install jmeter
