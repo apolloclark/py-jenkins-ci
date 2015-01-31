@@ -7,17 +7,12 @@ export HOST_USER
 export HOST_PASS
 
 # set the Workspace path
-WORKSPACE_PATH="/var/lib/jenkins/jobs/discover-flask-vagrant/workspace/"
-export WORKSPACE_PATH
+export WORKSPACE_PATH="/var/lib/jenkins/jobs/discover-flask-vagrant/workspace/"
 
 # set folder permissions, remove old test files
 sudo chmod -R 777 $WORKSPACE_PATH
 cd $WORKSPACE_PATH
-rm -f clonedigger.xml
-rm -f coverage.xml
-rm -f nosetests.xml
-rm -f pylint.out
-rm -f sloccount.sc
+rm -rf $WORKSPACE_PATH/*
 
 # connect to Host Machine
 sshpass -p $HOST_PASS ssh $HOST_USER@10.0.2.2 -o StrictHostKeyChecking=no -t -t <<EOF

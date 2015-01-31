@@ -10,13 +10,12 @@ clonedigger --cpd-output -o clonedigger.xml project > /dev/null
 sloccount --duplicates --wide --details . | fgrep -v .svn > sloccount.sc || :
 
 # copy over test results
-TEST_FOLDER="vagrant@192.168.1.2:/var/lib/jenkins/jobs/discover-flask-vagrant/workspace/"
-export TEST_FOLDER
-sshpass -p "vagrant" scp -oStrictHostKeyChecking=no pylint.out $TEST_FOLDER
-sshpass -p "vagrant" scp -oStrictHostKeyChecking=no nosetests.xml $TEST_FOLDER
-sshpass -p "vagrant" scp -oStrictHostKeyChecking=no coverage.xml $TEST_FOLDER
-sshpass -p "vagrant" scp -oStrictHostKeyChecking=no clonedigger.xml $TEST_FOLDER
-sshpass -p "vagrant" scp -oStrictHostKeyChecking=no sloccount.sc $TEST_FOLDER
+export TEST_FOLDER="vagrant@192.168.1.2:/var/lib/jenkins/jobs/discover-flask-vagrant/workspace/"
+sshpass -p "vagrant" scp -o StrictHostKeyChecking=no pylint.out $TEST_FOLDER
+sshpass -p "vagrant" scp nosetests.xml $TEST_FOLDER
+sshpass -p "vagrant" scp coverage.xml $TEST_FOLDER
+sshpass -p "vagrant" scp clonedigger.xml $TEST_FOLDER
+sshpass -p "vagrant" scp sloccount.sc $TEST_FOLDER
 
 ps aux
 
